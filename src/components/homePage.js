@@ -1,3 +1,5 @@
+import homeImage from "../assets/pizzeria-2.jpg"
+
 function homePage() {
     const homeDiv = document.createElement('div')
 
@@ -11,7 +13,7 @@ function homePage() {
     heroDiv.appendChild(heroTitle)  
 
     const pizzeriaImg = document.createElement('img')
-    pizzeriaImg.setAttribute("src","../src/assets/pizzeria-2.jpg")
+    pizzeriaImg.setAttribute("src", homeImage)
     pizzeriaImg.setAttribute("alt", "pizza-img")
     pizzeriaImg.classList.add("home-page-pizza")
     heroDiv.appendChild(pizzeriaImg)

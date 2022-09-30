@@ -1,9 +1,11 @@
 import initialPageLoad from './components/initialPage.js'
 import homePage from './components/homePage.js'
 import aboutPage from './components/aboutPage.js'
+import contactPage from './components/contactPage.js'
 const staticContent = document.getElementById('static-content')
 const dynamicContent = document.getElementById('dynamic-content')
 staticContent.appendChild(initialPageLoad())
+staticContent.classList.add("static-div")
 
 const buttonDiv = document.createElement('div')
 buttonDiv.classList.add('button-div')
@@ -30,6 +32,10 @@ buttonDiv.appendChild(aboutButton)
 const contactButton = document.createElement('button')
 contactButton.classList.add('button-24')
 contactButton.textContent = "Contact"
+contactButton.addEventListener('click', () => {
+    dynamicContent.innerHTML = ""
+    dynamicContent.appendChild(contactPage())
+})
 buttonDiv.appendChild(contactButton)
 
 dynamicContent.appendChild(homePage())
